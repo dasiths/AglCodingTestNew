@@ -5,26 +5,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AglCodingTestNew.Models;
+using AglCodingTestNew.Queries.GetJson;
 
 namespace AglCodingTestNew.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IGetAglJsonOutputQuery _getAglJsonOutputQuery;
+
+        public HomeController(IGetAglJsonOutputQuery getAglJsonOutputQuery)
+        {
+            _getAglJsonOutputQuery = getAglJsonOutputQuery;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public async Task<IActionResult> Test()
         {
-            ViewData["Message"] = "Your application description page.";
+            var url = "http://agl-developer-test.azurewebsites.net/people.json";
+            var jsonResult = await _getAglJsonOutputQuery.QueryAsync(url);
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Display AGL JSON";
 
             return View();
         }
