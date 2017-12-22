@@ -7,7 +7,7 @@ using Pet = AglCodingTestNew.Queries.GetJson.Dtos.Pet;
 
 namespace AglCodingTestNew.Mappers.MapDomain
 {
-    class JsonDtoToDomainMapper : IJsonDtoToDomainMapper
+    public class JsonDtoToDomainMapper : IJsonDtoToDomainMapper
     {
         public Domain.Person[] Map(Person[] param)
         {

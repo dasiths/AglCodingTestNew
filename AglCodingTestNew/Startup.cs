@@ -12,12 +12,17 @@ namespace AglCodingTestNew
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostingEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
+            this.Configuration = builder.Build();
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfigurationRoot Configuration { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -33,7 +38,9 @@ namespace AglCodingTestNew
         // "Without ConfigureContainer" mechanism shown later.
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterModule(new AutofacModule());
+            var settings = Configuration.GetSection("AglSettings").Get<Settings.Settings>();
+
+            builder.RegisterModule(new AutofacModule(settings));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +59,7 @@ namespace AglCodingTestNew
             }
 
             app.UseStaticFiles();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

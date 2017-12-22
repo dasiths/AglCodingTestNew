@@ -4,7 +4,7 @@ using AglCodingTestNew.Queries.GetJson.Dtos;
 
 namespace AglCodingTestNew.Queries.GetDomainModel
 {
-    class GetDomainModelsFromDtosQuery : IGetDomainModelsFromDtosQuery
+    public class GetDomainModelsFromDtosQuery : IGetDomainModelsFromDtosQuery
     {
         private readonly IJsonDtoToDomainMapper _jsonDtoToDomainMapper;
 
