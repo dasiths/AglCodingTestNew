@@ -1,7 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Test";
+﻿@using AglCodingTestNew.Domain
+
+@{
+    ViewData["Title"] = "Test Page";
 }
-<h2>@ViewData["Title"]</h2>
+
 <h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+<div>
+    <div>
+        @foreach (TestViewModel vm in ViewBag.Model)
+        {
+            <h4>@vm.Gender</h4>
+            <br />
+            <ul>
+                @foreach (Pet p in vm.Pets)
+                {
+                    <li>@p.Name</li>
+                }
+            </ul>
+            <br/>
+         }
+</div>
+</div>

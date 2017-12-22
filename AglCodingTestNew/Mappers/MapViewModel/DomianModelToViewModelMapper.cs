@@ -22,7 +22,10 @@ namespace AglCodingTestNew.Mappers.MapViewModel
                 .Select(genderGroup => new TestViewModel()
                 {
                     Gender = genderGroup.Key,
-                    Pets = genderGroup.SelectMany(person => person.Pets).ToArray()
+                    Pets = genderGroup
+                    .SelectMany(person => person.Pets)
+                    .OrderBy(pet => pet.Name)
+                    .ToArray()
 
                 });
 

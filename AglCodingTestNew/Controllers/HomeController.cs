@@ -44,7 +44,7 @@ namespace AglCodingTestNew.Controllers
             var personViewModels = await _getViewModelFromDomainModelQuery.QueryAsync(persons);
 
             // Set data to display
-            ViewBag.Message = "Display AGL JSON";
+            ViewBag.Message = "AGL Test - Display Result";
             ViewBag.Model = personViewModels;
 
             return View();

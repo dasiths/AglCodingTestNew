@@ -23,7 +23,10 @@ namespace AglCodingTestNew.Queries.GetViewModel
         {
             var result =  _domianModelToViewModelMapper.Map(param);
 
-            return _catsFilter.GetFilteredResult(result).ToArray();
+            return _catsFilter
+                .GetFilteredResult(result)
+                .OrderBy(v => v.Gender.ToString())
+                .ToArray();
         }
     }
 }
