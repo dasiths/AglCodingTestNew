@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using AglCodingTestNew.Mappers;
 using AglCodingTestNew.Queries;
 using AglCodingTestNew.Queries.GetJson;
 using Autofac;
@@ -12,9 +13,16 @@ namespace AglCodingTestNew
     {
         protected override void Load(ContainerBuilder builder)
         {
+            var assemblies = new[] {Assembly.GetExecutingAssembly()};
+
             builder
-                .RegisterAssemblyTypes(new [] {Assembly.GetExecutingAssembly()})
+                .RegisterAssemblyTypes(assemblies)
                 .AsClosedTypesOf(typeof(IQuery<,>));
+
+            builder
+                .RegisterAssemblyTypes(assemblies)
+                .AsClosedTypesOf(typeof(IMapper<,>));
+
         }
     }
 }
