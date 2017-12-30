@@ -4,10 +4,6 @@ using AglCodingTestNew.Queries;
 using AglCodingTestNew.ResultFilters;
 using Autofac;
 using Module = Autofac.Module;
-using System.Configuration;
-using AglCodingTestNew.Settings;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 
 namespace AglCodingTestNew
 {

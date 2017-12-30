@@ -1,5 +1,3 @@
-using System;
-
 namespace AglCodingTestNew.Models
 {
     public class ErrorViewModel
