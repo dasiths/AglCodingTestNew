@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace AglCodingTestNew.Mappers.MapJson
 {
-    class AglJsonModelMapper : IAglJsonModelMapper
+    public  class AglJsonModelMapper : IAglJsonModelMapper
     {
         public Person[] Map(string param)
         {
