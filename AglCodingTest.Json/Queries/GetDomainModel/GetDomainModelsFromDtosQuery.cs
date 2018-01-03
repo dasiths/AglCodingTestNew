@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using AglCodingTest.Core.Mappers.MapDomain;
-using AglCodingTest.Core.Queries.GetJson.Dtos;
+using AglCodingTest.Json.Mappers.MapDomain;
+using AglCodingTest.Json.Queries.GetJson.Dtos;
 
-namespace AglCodingTest.Core.Queries.GetDomainModel
+namespace AglCodingTest.Json.Queries.GetDomainModel
 {
     public class GetDomainModelsFromDtosQuery : IGetDomainModelsFromDtosQuery
     {
@@ -13,7 +13,7 @@ namespace AglCodingTest.Core.Queries.GetDomainModel
             _jsonDtoToDomainMapper = jsonDtoToDomainMapper;
         }
 
-        public async Task<Domain.Person[]> QueryAsync(Person[] param)
+        public async Task<Core.Domain.Person[]> QueryAsync(Person[] param)
         {
             return _jsonDtoToDomainMapper.Map(param);
         }

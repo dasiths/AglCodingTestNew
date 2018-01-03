@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 using AglCodingTest.Core.Mappers;
 using AglCodingTest.Core.Queries;
 using AglCodingTest.Core.ResultFilters;
@@ -18,7 +21,10 @@ namespace AglCodingTestNew
 
         protected override void Load(ContainerBuilder builder)
         {
-            var assemblies = new[] {Assembly.GetExecutingAssembly(), Assembly.GetAssembly(typeof(AglCodingTest.Core.Domain.Person)), };
+            var assemblies = Directory.EnumerateFiles(AppDomain.CurrentDomain.BaseDirectory, "*.dll", SearchOption.TopDirectoryOnly)
+                .Where(filePath => Path.GetFileName(filePath).StartsWith("AglCodingTest"))
+                .Select(Assembly.LoadFrom)
+                .ToArray();
 
             builder
                 .RegisterAssemblyTypes(assemblies)

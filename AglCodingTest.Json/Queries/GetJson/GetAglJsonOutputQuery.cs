@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using AglCodingTest.Core.Mappers.MapJson;
-using AglCodingTest.Core.Queries.GetJson.Dtos;
+using AglCodingTest.Json.Mappers.MapJson;
+using AglCodingTest.Json.Queries.GetJson.Dtos;
 
-namespace AglCodingTest.Core.Queries.GetJson
+namespace AglCodingTest.Json.Queries.GetJson
 {
     public class GetAglJsonOutputQuery : IGetAglJsonOutputQuery
     {

@@ -1,7 +1,7 @@
-using AglCodingTest.Core.Queries.GetJson.Dtos;
+using AglCodingTest.Json.Queries.GetJson.Dtos;
 using Newtonsoft.Json;
 
-namespace AglCodingTest.Core.Mappers.MapJson
+namespace AglCodingTest.Json.Mappers.MapJson
 {
     public  class AglJsonModelMapper : IAglJsonModelMapper
     {

@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AglCodingTest.Core\AglCodingTest.Core.csproj" />
+    <ProjectReference Include="..\AglCodingTest.Json\AglCodingTest.Json.csproj" />
     <ProjectReference Include="..\AglCodingTestNew\AglCodingTestNew.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace AglCodingTest.Core.Queries.GetJson.Dtos
+namespace AglCodingTest.Json.Queries.GetJson.Dtos
 {
     public class Pet
     {

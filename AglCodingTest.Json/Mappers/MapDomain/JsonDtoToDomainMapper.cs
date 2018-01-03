@@ -2,14 +2,14 @@
 using System.Linq;
 using AglCodingTest.Core.Domain;
 using AglCodingTest.Core.Exceptions;
-using Person = AglCodingTest.Core.Queries.GetJson.Dtos.Person;
-using Pet = AglCodingTest.Core.Queries.GetJson.Dtos.Pet;
+using Person = AglCodingTest.Json.Queries.GetJson.Dtos.Person;
+using Pet = AglCodingTest.Json.Queries.GetJson.Dtos.Pet;
 
-namespace AglCodingTest.Core.Mappers.MapDomain
+namespace AglCodingTest.Json.Mappers.MapDomain
 {
     public class JsonDtoToDomainMapper : IJsonDtoToDomainMapper
     {
-        public Domain.Person[] Map(Person[] param)
+        public Core.Domain.Person[] Map(Person[] param)
         {
             try
             {
@@ -21,11 +21,11 @@ namespace AglCodingTest.Core.Mappers.MapDomain
             }
         }
 
-        public static Domain.Person MapToDomainModel(Person person)
+        public static Core.Domain.Person MapToDomainModel(Person person)
         {
             var parsed = Enum.TryParse<Gender>(person.Gender, out var genderType);
 
-            return new Domain.Person()
+            return new Core.Domain.Person()
             {
                 Age = person.Age,
                 Gender = parsed ? genderType : Gender.Unspecified,
@@ -34,11 +34,11 @@ namespace AglCodingTest.Core.Mappers.MapDomain
             };
         }
 
-        public static Domain.Pet MapToDomainModel(Pet pet)
+        public static Core.Domain.Pet MapToDomainModel(Pet pet)
         {
             var parsed = Enum.TryParse<PetKind>(pet.Type, out var petType);
 
-            return new Domain.Pet()
+            return new Core.Domain.Pet()
             {
                 Name = pet.Name,
                 Type = parsed ? petType : PetKind.Unknown

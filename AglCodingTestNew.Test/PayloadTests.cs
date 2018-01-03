@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using AglCodingTest.Core.Mappers.MapDomain;
-using AglCodingTest.Core.Mappers.MapJson;
-using AglCodingTest.Core.Queries.GetDomainModel;
-using AglCodingTest.Core.Queries.GetJson;
-using AglCodingTest.Core.Queries.GetJson.Dtos;
+using AglCodingTest.Json.Mappers.MapDomain;
+using AglCodingTest.Json.Mappers.MapJson;
+using AglCodingTest.Json.Queries.GetDomainModel;
+using AglCodingTest.Json.Queries.GetJson;
+using AglCodingTest.Json.Queries.GetJson.Dtos;
 using Xunit;
 
 namespace AglCodingTestNew.Test

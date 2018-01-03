@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTestNew.Test", "Ag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AglCodingTest.Core", "AglCodingTest.Core\AglCodingTest.Core.csproj", "{A637935A-FF3D-4FA1-B60A-406C1760F15E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AglCodingTest.Json", "AglCodingTest.Json\AglCodingTest.Json.csproj", "{D60F02A4-56A0-4898-B486-7028DC2869FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A637935A-FF3D-4FA1-B60A-406C1760F15E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A637935A-FF3D-4FA1-B60A-406C1760F15E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A637935A-FF3D-4FA1-B60A-406C1760F15E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D60F02A4-56A0-4898-B486-7028DC2869FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D60F02A4-56A0-4898-B486-7028DC2869FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D60F02A4-56A0-4898-B486-7028DC2869FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D60F02A4-56A0-4898-B486-7028DC2869FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
