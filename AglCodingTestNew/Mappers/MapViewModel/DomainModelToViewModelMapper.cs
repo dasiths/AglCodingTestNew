@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AglCodingTest.Core.Domain;
-using AglCodingTestNew.Models;
+using AglCodingTest.Web.Models;
 
-namespace AglCodingTestNew.Mappers.MapViewModel
+namespace AglCodingTest.Web.Mappers.MapViewModel
 {
     public class DomainModelToViewModelMapper : IDomianModelToViewModelMapper
     {

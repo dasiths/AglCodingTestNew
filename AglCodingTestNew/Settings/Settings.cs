@@ -1,4 +1,4 @@
-﻿namespace AglCodingTestNew.Settings
+﻿namespace AglCodingTest.Web.Settings
 {
     public class Settings : ISettings
     {

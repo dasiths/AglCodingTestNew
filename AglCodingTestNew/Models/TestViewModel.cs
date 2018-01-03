@@ -1,6 +1,6 @@
 ﻿using AglCodingTest.Core.Domain;
 
-namespace AglCodingTestNew.Models
+namespace AglCodingTest.Web.Models
 {
     public class TestViewModel
     {

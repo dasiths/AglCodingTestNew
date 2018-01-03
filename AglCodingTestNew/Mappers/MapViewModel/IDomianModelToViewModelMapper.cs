@@ -1,8 +1,8 @@
 ﻿using AglCodingTest.Core.Domain;
 using AglCodingTest.Core.Mappers;
-using AglCodingTestNew.Models;
+using AglCodingTest.Web.Models;
 
-namespace AglCodingTestNew.Mappers.MapViewModel
+namespace AglCodingTest.Web.Mappers.MapViewModel
 {
     public interface IDomianModelToViewModelMapper: IMapper<Person[], TestViewModel[]>
     {

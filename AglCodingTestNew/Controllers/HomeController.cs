@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using AglCodingTest.Core.Queries.GetHttpQuery;
 using AglCodingTest.Json.Queries.GetDomainModel;
 using AglCodingTest.Json.Queries.GetJson;
+using AglCodingTest.Web.Models;
+using AglCodingTest.Web.Queries.GetViewModel;
+using AglCodingTest.Web.Settings;
 using Microsoft.AspNetCore.Mvc;
-using AglCodingTestNew.Models;
-using AglCodingTestNew.Queries.GetViewModel;
-using AglCodingTestNew.Settings;
 using Microsoft.Extensions.Logging;
 
-namespace AglCodingTestNew.Controllers
+namespace AglCodingTest.Web.Controllers
 {
     public class HomeController : Controller
     {

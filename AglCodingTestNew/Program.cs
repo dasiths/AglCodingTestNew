@@ -2,7 +2,7 @@
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AglCodingTestNew
+namespace AglCodingTest.Web
 {
     public class Program
     {

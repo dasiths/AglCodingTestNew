@@ -3,10 +3,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using AglCodingTest.Core.Domain;
 using AglCodingTest.Core.ResultFilters;
-using AglCodingTestNew.Mappers.MapViewModel;
-using AglCodingTestNew.Models;
+using AglCodingTest.Web.Mappers.MapViewModel;
+using AglCodingTest.Web.Models;
 
-namespace AglCodingTestNew.Queries.GetViewModel
+namespace AglCodingTest.Web.Queries.GetViewModel
 {
     public class GetViewModelFromDomainModelQuery : IGetViewModelFromDomainModelQuery
     {

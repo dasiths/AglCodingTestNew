@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using AglCodingTest.Core.Domain;
-using AglCodingTestNew.Models;
+using AglCodingTest.Web.Models;
 
-namespace AglCodingTestNew.ResultFilters.TestFilter
+namespace AglCodingTest.Web.ResultFilters.TestFilter
 {
     public class CatsFilter : ICatsFilter
     {

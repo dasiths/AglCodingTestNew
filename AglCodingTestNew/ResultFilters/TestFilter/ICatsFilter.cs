@@ -1,7 +1,7 @@
 ﻿using AglCodingTest.Core.ResultFilters;
-using AglCodingTestNew.Models;
+using AglCodingTest.Web.Models;
 
-namespace AglCodingTestNew.ResultFilters.TestFilter
+namespace AglCodingTest.Web.ResultFilters.TestFilter
 {
     public interface ICatsFilter: IResultFilter<TestViewModel>
     {

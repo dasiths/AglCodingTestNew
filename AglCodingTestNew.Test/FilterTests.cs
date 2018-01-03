@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using AglCodingTest.Core.Domain;
-using AglCodingTestNew.Models;
-using AglCodingTestNew.ResultFilters.TestFilter;
+using AglCodingTest.Web.Models;
+using AglCodingTest.Web.ResultFilters.TestFilter;
 using Xunit;
 
 namespace AglCodingTestNew.Test

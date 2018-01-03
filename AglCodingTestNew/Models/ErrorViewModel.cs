@@ -1,4 +1,4 @@
-namespace AglCodingTestNew.Models
+namespace AglCodingTest.Web.Models
 {
     public class ErrorViewModel
     {

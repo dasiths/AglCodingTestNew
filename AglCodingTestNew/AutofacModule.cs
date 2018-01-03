@@ -8,7 +8,7 @@ using AglCodingTest.Core.ResultFilters;
 using Autofac;
 using Module = Autofac.Module;
 
-namespace AglCodingTestNew
+namespace AglCodingTest.Web
 {
     public class AutofacModule : Module
     {
