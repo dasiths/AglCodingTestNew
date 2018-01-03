@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AglCodingTestNew.Domain;
+using AglCodingTest.Core.Domain;
+using AglCodingTest.Core.ResultFilters;
 using AglCodingTestNew.Mappers.MapViewModel;
 using AglCodingTestNew.Models;
-using AglCodingTestNew.ResultFilters;
 
 namespace AglCodingTestNew.Queries.GetViewModel
 {

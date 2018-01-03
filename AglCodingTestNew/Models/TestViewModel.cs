@@ -1,4 +1,4 @@
-﻿using AglCodingTestNew.Domain;
+﻿using AglCodingTest.Core.Domain;
 
 namespace AglCodingTestNew.Models
 {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AglCodingTestNew.Domain;
+using AglCodingTest.Core.Domain;
 using AglCodingTestNew.Models;
 
 namespace AglCodingTestNew.ResultFilters.TestFilter

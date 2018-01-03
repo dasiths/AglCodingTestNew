@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
-using AglCodingTestNew.Mappers;
-using AglCodingTestNew.Queries;
-using AglCodingTestNew.ResultFilters;
+using AglCodingTest.Core.Mappers;
+using AglCodingTest.Core.Queries;
+using AglCodingTest.Core.ResultFilters;
 using Autofac;
 using Module = Autofac.Module;
 
@@ -18,7 +18,7 @@ namespace AglCodingTestNew
 
         protected override void Load(ContainerBuilder builder)
         {
-            var assemblies = new[] {Assembly.GetExecutingAssembly()};
+            var assemblies = new[] {Assembly.GetExecutingAssembly(), Assembly.GetAssembly(typeof(AglCodingTest.Core.Domain.Person)), };
 
             builder
                 .RegisterAssemblyTypes(assemblies)

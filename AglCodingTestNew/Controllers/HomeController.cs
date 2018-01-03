@@ -1,10 +1,10 @@
 ﻿using System.Diagnostics;
 using System.Threading.Tasks;
+using AglCodingTest.Core.Queries.GetDomainModel;
+using AglCodingTest.Core.Queries.GetHttpQuery;
+using AglCodingTest.Core.Queries.GetJson;
 using Microsoft.AspNetCore.Mvc;
 using AglCodingTestNew.Models;
-using AglCodingTestNew.Queries.GetDomainModel;
-using AglCodingTestNew.Queries.GetHttpQuery;
-using AglCodingTestNew.Queries.GetJson;
 using AglCodingTestNew.Queries.GetViewModel;
 using AglCodingTestNew.Settings;
 

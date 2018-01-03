@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AglCodingTestNew.Domain;
+using AglCodingTest.Core.Domain;
 using AglCodingTestNew.Models;
 using AglCodingTestNew.ResultFilters.TestFilter;
 using Xunit;

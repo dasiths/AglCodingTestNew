@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AglCodingTest.Core\AglCodingTest.Core.csproj" />
     <ProjectReference Include="..\AglCodingTestNew\AglCodingTestNew.csproj" />
   </ItemGroup>
 

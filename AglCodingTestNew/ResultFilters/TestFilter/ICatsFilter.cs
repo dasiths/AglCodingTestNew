@@ -1,4 +1,5 @@
-﻿using AglCodingTestNew.Models;
+﻿using AglCodingTest.Core.ResultFilters;
+using AglCodingTestNew.Models;
 
 namespace AglCodingTestNew.ResultFilters.TestFilter
 {
