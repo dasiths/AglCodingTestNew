@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using AglCodingTest.Core.Queries.GetHttpQuery;
 using AglCodingTest.Json.Queries.GetDomainModel;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using AglCodingTestNew.Models;
 using AglCodingTestNew.Queries.GetViewModel;
 using AglCodingTestNew.Settings;
+using Microsoft.Extensions.Logging;
 
 namespace AglCodingTestNew.Controllers
 {
@@ -17,17 +19,20 @@ namespace AglCodingTestNew.Controllers
         private readonly IGetDomainModelsFromDtosQuery _getDomainModelsFromDtosQuery;
         private readonly IGetViewModelFromDomainModelQuery _getViewModelFromDomainModelQuery;
         private readonly ISettings _settings;
+        private readonly ILogger<HomeController> _logger;
 
         public HomeController(IGetAglJsonOutputQuery getAglJsonOutputQuery, 
             IGetDomainModelsFromDtosQuery getDomainModelsFromDtosQuery, 
             IGetViewModelFromDomainModelQuery getViewModelFromDomainModelQuery, 
-            ISettings settings, IGetHttpResourceQuery getHttpResourceQuery)
+            ISettings settings, IGetHttpResourceQuery getHttpResourceQuery, 
+            ILogger<HomeController> logger)
         {
             _getAglJsonOutputQuery = getAglJsonOutputQuery;
             _getDomainModelsFromDtosQuery = getDomainModelsFromDtosQuery;
             _getViewModelFromDomainModelQuery = getViewModelFromDomainModelQuery;
             _settings = settings;
             _getHttpResourceQuery = getHttpResourceQuery;
+            _logger = logger;
         }
 
         public IActionResult Index()
@@ -37,23 +42,31 @@ namespace AglCodingTestNew.Controllers
 
         public async Task<IActionResult> Test()
         {
-            // Get http resource
-            var jsonPayload = await _getHttpResourceQuery.QueryAsync(_settings.JsonUrl);
+            try
+            {
+                // Get http resource
+                var jsonPayload = await _getHttpResourceQuery.QueryAsync(_settings.JsonUrl);
 
-            // Map json result to dto
-            var jsonResult = await _getAglJsonOutputQuery.QueryAsync(jsonPayload);
+                // Map json result to dto
+                var jsonResult = await _getAglJsonOutputQuery.QueryAsync(jsonPayload);
 
-            // Map result to domian model
-            var persons = await _getDomainModelsFromDtosQuery.QueryAsync(jsonResult);
+                // Map result to domian model
+                var persons = await _getDomainModelsFromDtosQuery.QueryAsync(jsonResult);
 
-            // Map result to view model
-            var personViewModels = await _getViewModelFromDomainModelQuery.QueryAsync(persons);
+                // Map result to view model
+                var personViewModels = await _getViewModelFromDomainModelQuery.QueryAsync(persons);
 
-            // Set data to display
-            ViewBag.Message = "AGL Test - Display Result";
-            ViewBag.Model = personViewModels;
+                // Set data to display
+                ViewBag.Message = "AGL Test - Display Result";
+                ViewBag.Model = personViewModels;
 
-            return View();
+                return View();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return Error();
+            }
         }
 
         public IActionResult Error()
