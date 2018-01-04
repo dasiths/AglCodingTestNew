@@ -6,7 +6,7 @@ using AglCodingTest.Web.Models;
 using AglCodingTest.Web.ResultFilters.TestFilter;
 using Xunit;
 
-namespace AglCodingTestNew.Test
+namespace AglCodingTest.Core.Tests
 {
     public class FilterTests
     {

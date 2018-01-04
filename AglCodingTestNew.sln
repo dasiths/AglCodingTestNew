@@ -1,15 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTestNew", "AglCodingTestNew\AglCodingTestNew.csproj", "{56481971-5C93-4716-A3CE-CE097002FA7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTest.Web", "AglCodingTest.Web\AglCodingTest.Web.csproj", "{56481971-5C93-4716-A3CE-CE097002FA7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTestNew.Test", "AglCodingTestNew.Test\AglCodingTestNew.Test.csproj", "{066ADACC-C203-4155-AAEA-5D2A42046F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTest.Core.Tests", "AglCodingTest.Core.Tests\AglCodingTest.Core.Tests.csproj", "{066ADACC-C203-4155-AAEA-5D2A42046F2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AglCodingTest.Core", "AglCodingTest.Core\AglCodingTest.Core.csproj", "{A637935A-FF3D-4FA1-B60A-406C1760F15E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTest.Core", "AglCodingTest.Core\AglCodingTest.Core.csproj", "{A637935A-FF3D-4FA1-B60A-406C1760F15E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AglCodingTest.Json", "AglCodingTest.Json\AglCodingTest.Json.csproj", "{D60F02A4-56A0-4898-B486-7028DC2869FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AglCodingTest.Json", "AglCodingTest.Json\AglCodingTest.Json.csproj", "{D60F02A4-56A0-4898-B486-7028DC2869FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

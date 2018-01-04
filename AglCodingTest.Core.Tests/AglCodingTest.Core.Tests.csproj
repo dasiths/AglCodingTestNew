@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>AglCodingTest.Core.Tests</AssemblyName>
+
+    <RootNamespace>AglCodingTest.Core.Tests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,7 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AglCodingTest.Core\AglCodingTest.Core.csproj" />
     <ProjectReference Include="..\AglCodingTest.Json\AglCodingTest.Json.csproj" />
-    <ProjectReference Include="..\AglCodingTestNew\AglCodingTestNew.csproj" />
+    <ProjectReference Include="..\AglCodingTest.Web\AglCodingTest.Web.csproj" />
   </ItemGroup>
 
 </Project>
