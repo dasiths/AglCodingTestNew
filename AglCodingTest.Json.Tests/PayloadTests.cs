@@ -9,7 +9,7 @@ using AglCodingTest.Json.Queries.GetJson;
 using AglCodingTest.Json.Queries.GetJson.Dtos;
 using Xunit;
 
-namespace AglCodingTest.Core.Tests
+namespace AglCodingTest.Json.Tests
 {
     public class PayloadTests
     {
