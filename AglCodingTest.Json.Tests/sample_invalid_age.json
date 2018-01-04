@@ -2,7 +2,7 @@
   {
     "name": "Bob",
     "gender": "Male",
-    "age": 23,
+    "age": 0,
     "pets": [
       {
         "name": "Garfield",

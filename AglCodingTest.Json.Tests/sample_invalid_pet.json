@@ -5,8 +5,8 @@
     "age": 23,
     "pets": [
       {
-        "name": "Garfield",
-        "type": "Cat"
+        "name": "",
+        "type": ""
       },
       {
         "name": "Fido",

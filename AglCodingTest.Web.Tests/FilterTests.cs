@@ -11,7 +11,7 @@ namespace AglCodingTest.Web.Tests
     public class FilterTests
     {
         [Fact]
-        public async Task CatFilterWorks()
+        public async Task FiltersOutAllPetsExceptCats()
         {
             var persons = new List<TestViewModel>()
             {
@@ -72,7 +72,7 @@ namespace AglCodingTest.Web.Tests
                         new Pet()
                         {
                             Name = "Fish3",
-                            Type = PetKind.Fish
+                            Type = PetKind.Unknown
                         },
                     }
                 }

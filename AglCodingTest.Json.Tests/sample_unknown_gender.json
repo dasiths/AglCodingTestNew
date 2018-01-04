@@ -1,7 +1,7 @@
 ﻿[
   {
     "name": "Bob",
-    "gender": "Male",
+    "gender": "unknown",
     "age": 23,
     "pets": [
       {

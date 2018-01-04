@@ -9,5 +9,20 @@ namespace AglCodingTest.Json.Queries.GetJson.Dtos
 
         [JsonProperty("type")]
         public string Type { get; set; }
+
+        public bool IsValid()
+        {
+            if (string.IsNullOrWhiteSpace(Name))
+            {
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Type))
+            {
+                return false;
+            }
+
+            return true;
+        }
     }
 }

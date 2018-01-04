@@ -3,16 +3,7 @@
     "name": "Bob",
     "gender": "Male",
     "age": 23,
-    "pets": [
-      {
-        "name": "Garfield",
-        "type": "Cat"
-      },
-      {
-        "name": "Fido",
-        "type": "Dog"
-      }
-    ]
+    "pets": null
   },
   {
     "name": "Jennifer",
@@ -24,6 +15,12 @@
         "type": "Cat"
       }
     ]
+  },
+  {
+    "name": "Steve",
+    "gender": "Male",
+    "age": 45,
+    "pets": null
   },
   {
     "name": "Fred",

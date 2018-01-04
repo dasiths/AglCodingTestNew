@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using AglCodingTest.Core.Exceptions;
 using AglCodingTest.Json.Mappers.MapDomain;
 using AglCodingTest.Json.Mappers.MapJson;
 using AglCodingTest.Json.Queries.GetDomainModel;
@@ -21,7 +22,78 @@ namespace AglCodingTest.Json.Tests
 
             var result = await outputQuery.QueryAsync(payload);
 
-            Assert.Equal(6, result.Length);
+            Assert.Equal(5, result.Length);
+        }
+
+        [Fact]
+        public async Task EmptyPayloadIsHandled()
+        {
+            var payload = File.ReadAllText("sample_empty.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            var result = await outputQuery.QueryAsync(payload);
+
+            Assert.Empty(result);
+        }
+
+        [Fact]
+        public async Task UnknownGenderIsHandled()
+        {
+            var payload = File.ReadAllText("sample_unknown_gender.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            var result = await outputQuery.QueryAsync(payload);
+
+            Assert.Equal(5, result.Length);
+        }
+
+        [Fact]
+        public async Task UnknownPetTypeIsHandled()
+        {
+            var payload = File.ReadAllText("sample_unknown_pet_type.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            var result = await outputQuery.QueryAsync(payload);
+
+            Assert.Equal(5, result.Length);
+        }
+
+        [Fact]
+        public async Task NullPetsAreHandled()
+        {
+            var payload = File.ReadAllText("sample_null_pets.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            var result = await outputQuery.QueryAsync(payload);
+
+            Assert.Equal(6, result.Count(p => p.Pets != null));
+        }
+
+        [Fact]
+        public async Task InvalidAgeThrowsException()
+        {
+            var payload = File.ReadAllText("sample_invalid_age.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            await Assert.ThrowsAsync<InvalidModelStateException>(() => outputQuery.QueryAsync(payload));
+        }
+
+        [Fact]
+        public async Task InvalidNameThrowsException()
+        {
+            var payload = File.ReadAllText("sample_invalid_person_name.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            await Assert.ThrowsAsync<InvalidModelStateException>(() => outputQuery.QueryAsync(payload));
+        }
+
+        [Fact]
+        public async Task InvalidPetThrowsException()
+        {
+            var payload = File.ReadAllText("sample_invalid_pet.json");
+            var outputQuery = new GetAglJsonOutputQuery(new AglJsonModelMapper());
+
+            await Assert.ThrowsAsync<InvalidModelStateException>(() => outputQuery.QueryAsync(payload));
         }
 
         [Fact]
